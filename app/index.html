@@ -11,8 +11,30 @@
       <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-
-      <div ui-view></div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li ui-sref-active="active">
+              <a data-ui-sref="Dashboard">Dashboard</a>
+            </li>
+            <li ui-sref-active="active">
+              <a data-ui-sref="Contacts">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <ui-view />
+        </div>
+      </div>
+    </div>
 
       <script src="js/main.js"></script>
   </body>

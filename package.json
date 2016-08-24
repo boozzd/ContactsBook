@@ -1,8 +1,8 @@
 {
-  "name": "angularjs-gulp-browserify-boilerplate",
+  "name": "contacts-book",
   "version": "1.7.0",
-  "author": "Jake Marsh <jakemmarsh@gmail.com>",
-  "description": "Boilerplate using AngularJS, SASS, Gulp, and Browserify while also utilizing best practices.",
+  "author": "Dmitriy Shapovalenko <boozzd@gmail.com>",
+  "description": "Contact Book.",
   "repository": {
     "type": "git",
     "url": "https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate.git"
