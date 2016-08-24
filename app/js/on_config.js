@@ -16,9 +16,9 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compil
   })
   .state('Contacts', {
     url: '/contacts',
-    controller: 'ExampleCtrl as home',
-    templateUrl: 'home.html',
-    title: 'Test'
+    controller: 'ContactsCtrl as contacts',
+    templateUrl: 'contacts.html',
+    title: 'Contact List'
   });
 
   $urlRouterProvider.otherwise('/');

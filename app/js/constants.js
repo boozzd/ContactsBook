@@ -1,5 +1,5 @@
 const AppSettings = {
-  appTitle: 'Example Application',
+  appTitle: 'Contacts Book',
   apiUrl: '/api/v1'
 };
 

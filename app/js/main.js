@@ -5,6 +5,7 @@ import constants from './constants';
 import onConfig  from './on_config';
 import onRun     from './on_run';
 import 'angular-ui-router';
+import 'angular-utils-pagination';
 import './templates';
 import './controllers';
 import './services';
@@ -13,6 +14,7 @@ import './directives';
 // create and bootstrap application
 const requires = [
   'ui.router',
+  'angularUtils.directives.dirPagination',
   'templates',
   'app.controllers',
   'app.services',
