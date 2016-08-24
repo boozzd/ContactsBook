@@ -10,8 +10,8 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compil
   $stateProvider
   .state('Dashboard', {
     url: '/',
-    controller: 'ExampleCtrl as home',
-    templateUrl: 'home.html',
+    controller: 'DashboardCtrl as dash',
+    templateUrl: 'dashboard.html',
     title: 'Home'
   })
   .state('Contacts', {
