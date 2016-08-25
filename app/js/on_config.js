@@ -25,6 +25,20 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compil
         return $timeout(() => ContactsService.getAll());
       }
     }
+  })
+  .state('Contact', {
+    url: '/contact/{id:[0-9]{0,9}}',
+    controller: 'ContactCtrl as cnt',
+    templateUrl: 'contact.html',
+    title: 'Contact Create/Edit',
+    resolve: {
+      contact: function(ContactsService, $stateParams) {
+        'ngInject';
+        return ($stateParams.id > 0) ?
+          ContactsService.get(parseInt($stateParams.id)) :
+          {};
+      }
+    }
   });
 
   $urlRouterProvider.otherwise('/');

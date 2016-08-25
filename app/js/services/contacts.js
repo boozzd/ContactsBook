@@ -31,7 +31,7 @@ function ContactsService($http, localStorageService) {
         const err = new TypeError('Incorrect type data. Must be an array');
         reject(err);
       } else {
-          return data.filter(item => item.id === id)[0];
+        resolve(data.filter(item => item.id === id)[0]);
       }
     });
   };

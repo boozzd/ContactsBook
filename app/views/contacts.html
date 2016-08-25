@@ -14,7 +14,11 @@
     </div>
   </div>
   <div class="col-sm-4">
-    <a class="btn btn-primary pull-right">Add Contact</a>
+    <a
+      class="btn btn-primary pull-right"
+      data-ui-sref="Contact">
+      Add Contact
+    </a>
   </div>
 </div>
 <hr />
@@ -31,7 +35,7 @@
     <tr
       dir-paginate="contact in cnts.contacts | filter: cnts.search | itemsPerPage: cnts.perPage">
       <td>{{contact.id}}</td>
-      <td>{{contact.firstName}} {{contact.lastName}}</td>
+      <td><a data-ui-sref="Contact({id: contact.id})">{{contact.firstName}} {{contact.lastName}}</a></td>
       <td>
         <div data-ng-repeat="email in contact.emails">
           {{email.type.title}}: <a href="mailto:{{email.value}}">{{email.value}}</a>
