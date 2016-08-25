@@ -11,7 +11,10 @@ export default {
     src: 'app/styles/**/*.scss',
     dest: 'build/css',
     prodSourcemap: false,
-    sassIncludePaths: []
+    sassIncludePaths: [
+      'bower_components/font-awesome-sass/assets/stylesheets',
+      'bower_components/bootstrap-sass/assets/stylesheets'
+    ]
   },
 
   scripts: {
@@ -27,7 +30,7 @@ export default {
   },
 
   fonts: {
-    src: ['app/fonts/**/*'],
+    src: ['app/fonts/**/*', 'bower_components/font-awesome-sass/assets/fonts/**/*'],
     dest: 'build/fonts'
   },
   'static': {
