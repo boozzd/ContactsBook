@@ -28,4 +28,13 @@ describe('Unit: ContactsService', function() {
 
     http.flush();
   });
+
+  it('should save data', function(done) {
+    var data = {firstName: 'test', lastName: 'test'};
+    service.save(data).then(result => {
+      expect(result.id).toMatch(/^[0-9]{1,9}$/);
+    }).catch(error => {
+      expect(error).toBeUndefined();
+    }).then(done);
+  });
 });

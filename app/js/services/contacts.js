@@ -36,6 +36,21 @@ function ContactsService($http, localStorageService) {
     });
   };
 
+  service.save = function(data) {
+    return service.getAll()
+    .then(contacts => {
+      const indexes = contacts.map(i => i.id);
+      if (data.id && indexes.indexOf(data.id) >= 0) {
+        contacts = contacts.map(i => (i.id === data.id) ? data : i);
+      } else {
+        data.id = Math.max.apply(this, indexes) + 1 || 1;
+        contacts.push(data);
+      }
+      localStorageService.set(key, contacts);
+      return data;
+    });
+  }
+
   return service;
 
 }
