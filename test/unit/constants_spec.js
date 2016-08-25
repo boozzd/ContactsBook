@@ -17,7 +17,7 @@ describe('Unit: Constants', function() {
   });
 
   it('should have an application name', function() {
-    expect(constants.appTitle).toEqual('Example Application');
+    expect(constants.appTitle).toEqual('Contacts Book');
   });
 
 });

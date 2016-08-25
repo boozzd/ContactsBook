@@ -4,7 +4,12 @@
     <div class="form-inline">
       <div class="form-group">
         <label for="find">Quick Find Contacts: </label>
-        <input type="text" id="find" class="form-control">
+        <input
+          type="text"
+          id="find"
+          class="form-control"
+          placeholder="Type Here"
+          data-ng-model="cnts.search">
       </div>
     </div>
   </div>
@@ -12,6 +17,7 @@
     <a class="btn btn-primary pull-right">Add Contact</a>
   </div>
 </div>
+<hr />
 <table class="table table-striped">
   <thead>
     <tr>
@@ -23,28 +29,24 @@
   </thead>
   <tbody>
     <tr
-      dir-paginate="meal in meals | itemsPerPage: pageSize"
-      current-page="currentPage">
-      <td>1</td>
-      <td>Test</td>
+      dir-paginate="contact in cnts.contacts | filter: cnts.search | itemsPerPage: cnts.perPage">
+      <td>{{contact.id}}</td>
+      <td>{{contact.firstName}} {{contact.lastName}}</td>
       <td>
-        Work: +4124123
-        <br>
-        Personal: + 42341324
+        <div data-ng-repeat="email in contact.emails">
+          {{email.type.title}}: <a href="mailto:{{email.value}}">{{email.value}}</a>
+        </div>
       </td>
       <td>
-        Work: test@test.com
-        <br>
-        Personal: test@test.com
-      </td>
-      <td>
-        <a class="btn btn-primary btn-sm">Edit</a>
+        <div data-ng-repeat="phone in contact.phones">
+          {{phone.type.title}}: <a href="callto:{{phone.value}}">{{phone.value}}</a>
+        </div>
       </td>
     </tr>
   </tbody>
 </table>
 <div class="row">
   <div class="col-sm-12">
-    <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="pagination.html"></dir-pagination-controls>
+    <dir-pagination-controls boundary-links="true" template-url="pagination.html"></dir-pagination-controls>
   </div>
 </div>

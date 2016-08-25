@@ -16,9 +16,15 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $compil
   })
   .state('Contacts', {
     url: '/contacts',
-    controller: 'ContactsCtrl as contacts',
+    controller: 'ContactsCtrl as cnts',
     templateUrl: 'contacts.html',
-    title: 'Contact List'
+    title: 'Contact List',
+    resolve: {
+      contacts: function(ContactsService, $timeout) {
+        'ngInject';
+        return $timeout(() => ContactsService.getAll());
+      }
+    }
   });
 
   $urlRouterProvider.otherwise('/');

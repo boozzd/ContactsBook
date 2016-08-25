@@ -30,6 +30,10 @@ export default {
     src: ['app/fonts/**/*'],
     dest: 'build/fonts'
   },
+  'static': {
+    src: 'app/static/**/*',
+    dest: 'build/static'
+  },
 
   assetExtensions: [
     'js',
@@ -42,7 +46,8 @@ export default {
     'otf',
     'ttc',
     'ttf',
-    'woff2?'
+    'woff2?',
+    'json'
   ],
 
   views: {

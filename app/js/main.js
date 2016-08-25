@@ -6,6 +6,7 @@ import onConfig  from './on_config';
 import onRun     from './on_run';
 import 'angular-ui-router';
 import 'angular-utils-pagination';
+import 'angular-local-storage';
 import './templates';
 import './controllers';
 import './services';
@@ -15,6 +16,7 @@ import './directives';
 const requires = [
   'ui.router',
   'angularUtils.directives.dirPagination',
+  'LocalStorageModule',
   'templates',
   'app.controllers',
   'app.services',

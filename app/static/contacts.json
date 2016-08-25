@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "firstName": "Dmitriy",
+    "lastName": "Shapovalenko",
+    "emails": [
+      {
+        "type": {
+          "title": "Work",
+          "key": "work"
+        },
+        "value": "work@gmail.com"
+      },
+      {
+        "type": {
+          "title": "Personal",
+          "key": "home"
+        },
+        "value": "home@gmail.com"
+      }
+    ],
+    "phones": [
+      {
+        "type": {
+          "title": "Work",
+          "key": "work"
+        },
+        "value": "+9112341234"
+      },
+      {
+        "type": {
+          "title": "Personal",
+          "key": "home"
+        },
+        "value": "+0201234123"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "firstName": "John",
+    "lastName": "Snow",
+    "emails": [
+      {
+        "type": {
+          "title": "Work",
+          "key": "work"
+        },
+        "value": "snow_work@gmail.com"
+      },
+      {
+        "type": {
+          "title": "Personal",
+          "key": "home"
+        },
+        "value": "snow_home@gmail.com"
+      }
+    ],
+    "phones": [
+      {
+        "type": {
+          "title": "Work",
+          "key": "work"
+        },
+        "value": "+91555555"
+      },
+      {
+        "type": {
+          "title": "Personal",
+          "key": "home"
+        },
+        "value": "+020111111"
+      }
+    ]
+  }
+]
