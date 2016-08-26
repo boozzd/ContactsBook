@@ -9,6 +9,7 @@ As a basic template, I choose [angularjs-gulp-browserify-boilerplate](https://gi
 - NodeJS 6.*
 - gulp
 - bower
+- JDK (for running tests)
 
 ### Setup
 - clone this repository
