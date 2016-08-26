@@ -7,6 +7,7 @@ import onRun     from './on_run';
 import 'angular-ui-router';
 import 'angular-utils-pagination';
 import 'angular-local-storage';
+import 'ng-mask';
 import './templates';
 import './controllers';
 import './services';
@@ -17,6 +18,7 @@ const requires = [
   'ui.router',
   'angularUtils.directives.dirPagination',
   'LocalStorageModule',
+  'ngMask',
   'templates',
   'app.controllers',
   'app.services',

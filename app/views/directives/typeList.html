@@ -1,0 +1,45 @@
+<div class="form-group">
+  <label for="" class="col-sm-2 control-label">{{title}}</label>
+  <div class="col-sm-10">
+    <a
+      href="#"
+      class="pull-right"
+      data-ng-click="addItem()">
+      <i class="fa fa-plus-circle fa-lg email-add-icon"></i>
+    </a>
+  </div>
+</div>
+<hr />
+<div
+  class="form-group"
+  data-ng-repeat="item in items">
+  <div class="col-sm-3"
+    data-ng-class="(form[type + '_type_' + $index].$invalid && form.$submitted) && 'has-error'">
+    <select
+      class="form-control"
+      name="{{type}}_type_{{$index}}"
+      required
+      data-ng-options="t.key as t.title for t in types"
+      data-ng-model="item.type.key"
+      data-ng-change="changeAct($index)">
+   </select>
+  </div>
+  <div class="col-sm-8"
+    data-ng-class="(form[type + '_' + $index].$invalid && (form[type + '_' + $index].$dirty || form.$submitted)) && 'has-error'">
+    <input
+      type="{{inputType}}"
+      class="form-control"
+      name="{{type}}_{{$index}}"
+      placeholder="{{placeholder}}"
+      required
+      data-ng-model="item.value">
+  </div>
+  <div class="col-sm-1">
+    <a
+      href="#"
+      class="pull-right"
+      data-ng-click="removeItem($index)">
+      <i class="fa fa-minus-circle fa-lg email-add-icon"></i>
+    </a>
+  </div>
+</div>
